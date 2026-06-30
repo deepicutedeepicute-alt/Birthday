@@ -1,138 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday 🎂</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
+<title>Happy Birthday Aishu Mam 💜</title>
 
-body{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-background:linear-gradient(135deg,#ff9ec4,#ffd6e8,#fff0f5);
-overflow:hidden;
-text-align:center;
-}
-
-.container{
-background:white;
-padding:40px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.2);
-max-width:500px;
-z-index:2;
-}
-
-h1{
-font-size:40px;
-color:#ff4081;
-margin-bottom:15px;
-}
-
-p{
-font-size:20px;
-color:#444;
-margin-bottom:20px;
-}
-
-button{
-padding:15px 30px;
-font-size:18px;
-border:none;
-border-radius:50px;
-background:#ff4081;
-color:white;
-cursor:pointer;
-transition:.3s;
-}
-
-button:hover{
-transform:scale(1.08);
-}
-
-#surprise{
-display:none;
-margin-top:25px;
-animation:pop 1s;
-}
-
-@keyframes pop{
-from{transform:scale(0);}
-to{transform:scale(1);}
-}
-
-.balloon{
-position:absolute;
-bottom:-150px;
-font-size:40px;
-animation:float 8s linear infinite;
-}
-
-@keyframes float{
-0%{transform:translateY(0);}
-100%{transform:translateY(-120vh);}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
-<div class="container">
-<h1>🎉 Happy Birthday! 🎂</h1>
+<div class="intro">
 
-<p>Dear <b>YOUR FRIEND NAME</b>,<br><br>
-Wishing you endless happiness, success and lots of smiles! 💖</p>
+<h2 class="typing">
+Someone special has a surprise for you...
+💜
+</h2>
 
-<button onclick="showSurprise()">🎁 Tap Here</button>
+<button id="openBtn">
 
-<div id="surprise">
-<h2>🎊 Surprise! 🎊</h2>
-<p>
-May all your dreams come true! 🌸<br>
-Stay blessed, stay happy and keep smiling! ❤️
+Open Your Surprise 🎁
+
+</button>
+
+</div>
+
+
+
+<div class="birthday hidden">
+
+<h1>
+
+🎉 Happy Birthday
+
+</h1>
+
+<h2>
+
+Aishu Mam 💜
+
+</h2>
+
+<img src="aishu.jpg" class="photo">
+
+<p class="message">
+
+Dear Aishu Mam,
+
+<br><br>
+
+Happy Birthday! 💜
+
+Thank you for being such a wonderful and kind person.
+
+May your life always be filled with happiness,
+
+good health,
+
+success,
+
+peace,
+
+and endless smiles.
+
+You truly deserve all the love and happiness in the world.
+
+<br><br>
+
+With lots of love,
+
+<br>
+
+Deepika 🌸
+
 </p>
 
-<h1>🎂🎈🎉</h1>
-</div>
+
+<button id="gift">
+
+🎁 Open Gift
+
+</button>
+
+
+<div id="surprise">
+
+🎂🎈🎊💜✨
 
 </div>
 
-<script>
+</div>
 
-function showSurprise(){
 
-document.getElementById("surprise").style.display="block";
+<canvas id="confetti"></canvas>
 
-for(let i=0;i<40;i++){
-
-let b=document.createElement("div");
-b.className="balloon";
-b.innerHTML=["🎈","🎉","✨","🎊","💖"][Math.floor(Math.random()*5)];
-
-b.style.left=Math.random()*100+"vw";
-b.style.animationDuration=(5+Math.random()*5)+"s";
-document.body.appendChild(b);
-
-setTimeout(()=>{
-b.remove();
-},9000);
-
-}
-
-alert("🎂 Happy Birthday! Have an Amazing Day! 💖");
-
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
+
 </html>
